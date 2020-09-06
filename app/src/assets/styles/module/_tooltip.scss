@@ -1,0 +1,68 @@
+.tooltip {
+  align-items: center;
+  background: $veryDarkGrayishBlue;
+  display: none;
+  justify-content: space-between;
+
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+
+  @include border-radius-bottom(10px);
+
+  @media (min-width: $tablet) {
+    border-radius: unset;
+    border-radius: 10px;
+
+    height: 57px;
+    justify-content: center;
+
+    bottom: 98px;
+    right: -70px;
+
+    width: 250px;
+  }
+}
+
+.set-icons {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.set-icons > span {
+  color: $text-grayishBlue;
+  letter-spacing: 0.7rem;
+  font-size: 1.2rem;
+  margin-left: 30px;
+  margin-right: 15px;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+  }
+}
+
+.set-icons > a img {
+  width: 20px;
+  margin-right: 15px;
+}
+
+.set-icons > a:nth-child(4) img {
+  margin-right: 0;
+}
+
+@media (min-width: $tablet) {
+  .tooltip::before {
+    content: '';
+    background: $veryDarkGrayishBlue;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    transform: rotate(45deg);
+    z-index: -10;
+  }
+}
